@@ -15,6 +15,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b4682ae6287fcf752ecaabbfcc7b6f9b72aa33933dc23a554d853aea8eea8635"
 
 [[package]]
+name = "cfg-if"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
+
+[[package]]
 name = "log"
 version = "0.4.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -63,6 +69,7 @@ name = "rusty-mikan-os"
 version = "0.1.0"
 dependencies = [
  "uefi",
+ "uefi-services",
 ]
 
 [[package]]
@@ -131,6 +138,17 @@ dependencies = [
  "bitflags",
  "ptr_meta",
  "uguid",
+]
+
+[[package]]
+name = "uefi-services"
+version = "0.21.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "44b32954ebbb4be5ebfde0df6699c2091f04e9f9c3762c65f3435dfb1a90a668"
+dependencies = [
+ "cfg-if",
+ "log",
+ "uefi",
 ]
 
 [[package]]
